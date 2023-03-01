@@ -1,0 +1,96 @@
+@charset "UTF_8";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+header{
+    text-align: center;
+    padding: 10px;
+    font-size: 2em;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.193);
+}
+body{
+    width: 94vw;
+    background-image: linear-gradient(to top, rgb(255, 255, 255) , rgb(179, 179, 179), rgb(255, 255, 255)  );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div{
+    display: block;
+    background-color: rgb(141, 141, 141);
+    width: 85vw;
+    margin: auto;
+    padding: 20px;
+
+}
+div#espec{
+    text-align: center;
+    line-height: 22px;
+}
+#btnAdd{
+    width: 35vw;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 0px;
+    box-sizing: border-box;
+    outline: 0;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
+    
+}
+.inputInspec{
+    height: 20px;
+    max-width: 40vw;
+    outline: 0;
+    font-size: large;
+    
+}
+#tabela{
+    width: 75vw;
+  
+    
+}
+table{
+    
+ background-color: rgb(197, 197, 197);
+
+ margin:auto;
+ border: 1px solid black;
+
+
+
+}
+th{
+    border: 1px solid black;
+    width: 40px;
+    height: 30px;
+    
+
+}
+tr{
+    height: 30px;
+    width: 40px;
+    
+}
+thead {
+   
+  }
+td{ /* WORDBREAK da quebra de ingrediente*/
+ word-break: break-all;
+    padding: 5px;
+    border: 1px solid black;
+    width: 40px;
+    height: 30px;
+   
+   
+}
+.btn{
+ width: 15px;
+ height: 15px;
+
+}
