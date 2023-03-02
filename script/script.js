@@ -9,6 +9,7 @@ let btnAddObs = document.getElementById('btnAddObs')
 let c = 0;
 let AbIngrediente = document.getElementById('AbaIngrediente')
 let AbModo = document.getElementById('AbaModo')
+
    
 function AdicionarIngrediente(){
     //Caputra de valores digitados.
@@ -53,7 +54,7 @@ function adicionarComentario(){
         
         n++
    
-    let novocomentario = `  <tr id="${n}"> <td colspan="4"> ${Observacao} </td>
+    let novocomentario = `  <tr id="${n}"> <td colspan="5"> ${Observacao} </td>
     <td id ="${n}"> <button onclick="deletar(${n})" class="delete">
     <i class="material-symbols-outlined">
         delete
