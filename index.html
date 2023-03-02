@@ -4,20 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style/style.css">
     <title>Ficha T</title>
 </head>
 <body>
     <header>
         <h1> Ficha T</h1>
+        
     </header>
+    <menu id="menu">
+        <button onclick="trocarAba(1)" id="AbaIngrediente">Ingrediente</button>
+        <button onclick="trocarAba(2)" id="AbaModo">Modo Preparo</button>
+    </menu>
     
-        <div id="espec">
+        <div class="aba1" id="espec" style="display: block;">
             <p>Nome ingrediente: <br> <input class="inputInspec" type="text" name="Ingrediente" id="txtingrediente"></p>
             <p>Quantidade: <br> <input class="inputInspec" type="number" name="Quantidade" id="quantidade"></p>
             <p>Preço: <br> <input class="inputInspec" type="number" name="Preço" id="preco"></p>
             <p>Qt. da embalagem: <br> <input  class="inputInspec"type="number" name="QuantoidadeEmbalagem" id="quantiaembalagem"></p>
-            <input class="inputInspec" type="button" value="Adicionar" id="btnAdd" onclick="add()">
+            <input class="inputInspec" type="button" value="Adicionar" id="btnAdd" onclick="AdicionarIngrediente()">
+        </div>
+        
+        
+        <div class="aba2" style="display: none;" id="Observacao">
+            <p id="Preparo">Adicionar Metodo de preparo:</p><br>
+            <p><textarea id="textarea"> </textarea></p><br>
+
+            <input class="inputInspec" type="button" value="Adicionar Obs." id="btnAddObs" onclick="adicionarComentario()">
         </div>
         <div >
             <table id="tabela" >
