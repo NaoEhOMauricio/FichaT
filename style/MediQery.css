@@ -6,7 +6,7 @@
         font-family: sans-serif;
     }
     header{
-       display: block;
+       display: none;
     }
     body{
         width: 100%;

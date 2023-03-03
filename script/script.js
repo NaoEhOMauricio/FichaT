@@ -11,16 +11,16 @@ let soma = 0;
 let AbIngrediente = document.getElementById('AbaIngrediente')
 let AbModo = document.getElementById('AbaModo')
 let SomaQuantia = document.getElementById('SomaQuantia')
-
+const ListaQuantia = [];
 const ListaResultado = [];
-const ListaGramas = [];
+
 
 //------------------------------------------------------------------------------------------------------
 function AdicionarIngrediente(){
     //Caputra de valores digitados.
     let ValorIngrediente = ingrediente.value;
     let ValorQuantia = quantia.value;
-    let ValorPreço = quantia.value;
+    let ValorPreço = preco.value;
     let ValorQemb = Qemb.value;
     let ValorResultado = ValorQuantia * ValorPreço / ValorQemb;
   
@@ -40,9 +40,10 @@ function AdicionarIngrediente(){
       `;
   
       ListaResultado.push(ValorResultado);
-      ListaGramas.push(ValorQuantia);
+      ListaQuantia.push(parseFloat(ValorQuantia));
       tabela.innerHTML += NovaLinha;
       atualizarSoma();
+      atualizarQuantia();
   
     //   ingrediente.value = "";
     //   quantia.value = "";
@@ -81,8 +82,11 @@ function adicionarComentario(){
 function deletar(id){
     var tarefa = document.getElementById(id);
     const valorResultado = parseFloat(tarefa.children[4].textContent);
+    const ValorQuantia = parseFloat(tarefa.children[4].textContent);
     tarefa.remove();
     subtrairArray(valorResultado);
+    subtrairArrayQuantia(ValorQuantia)
+    atualizarQuantia()
 }
 
 
@@ -104,10 +108,20 @@ function trocarAba(numero) {
 function atualizarSoma() {
     const soma = ListaResultado.reduce((total, numero) => total + numero, 0);
     const elementoSoma = document.getElementById("TotalSoma");
-    elementoSoma.textContent = soma;
+    elementoSoma.textContent = soma.toFixed(2);
     
     // Verifica se a lista está vazia
     if (ListaResultado.length === 0) {
+      elementoSoma.textContent = 0;
+    }
+  }
+  function atualizarQuantia() {
+    const soma = ListaQuantia.reduce((total, numero) => total + numero, 0);
+    const elementoSoma = document.getElementById("TotalQuantia");
+    elementoSoma.textContent = soma.toFixed(1) + "gr";
+    
+    // Verifica se a lista está vazia
+    if (ListaQuantia.length === 0) {
       elementoSoma.textContent = 0;
     }
   }
@@ -122,6 +136,17 @@ function subtrairArray(valor) {
       return acumulador - valorAtual;
     }, 0);
     atualizarSoma();
+    return resultado;
+}
+function subtrairArrayQuantia(valor) {
+    const index = ListaQuantia.indexOf(valor);
+    if (index > -1) {
+      ListaQuantia.splice(index, 1);
+    }
+    const resultado = ListaQuantia.reduce((acumulador, valorAtual) => {
+      return acumulador - valorAtual;
+    }, 0);
+    atualizarQuantia();
     return resultado;
 }
 
