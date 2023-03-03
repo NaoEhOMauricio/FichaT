@@ -163,3 +163,29 @@ td{ /* WORDBREAK da quebra de ingrediente*/
     color: rgb(100, 100, 100);
     text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
 }
+.valor {
+    background-color: rgba(57, 60, 60, 0.096);
+font-size: 0.8em;
+font-weight: bold;
+color: rgb(100, 100, 100);
+text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
+}
+#textarea{
+    font-size: 1.1rem;
+}
+#Preparo{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.368);
+}
+#Nome{
+    display: block;
+    width: 280px;
+    height: 40px;
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: 10px;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.155);
+}

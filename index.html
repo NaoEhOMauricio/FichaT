@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/MediQery.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style/style.css">
     <title>Ficha T</title>
@@ -19,11 +20,11 @@
     </menu>
     
         <div class="aba1" id="espec" style="display: block;">
-            <p>Nome ingrediente: <br> <input class="inputInspec" type="text" name="Ingrediente" id="txtingrediente"></p>
-            <p>Quantidade: <br> <input class="inputInspec" type="number" name="Quantidade" id="quantidade"></p>
-            <p>Preço: <br> <input class="inputInspec" type="number" name="Preço" id="preco"></p>
-            <p>Qt. da embalagem: <br> <input  class="inputInspec"type="number" name="QuantoidadeEmbalagem" id="quantiaembalagem"></p>
-            <input class="inputInspec" type="button" value="Adicionar" id="btnAdd" onclick="AdicionarIngrediente()">
+            <p>Nome ingrediente: <br> <input placeholder="'Arroz', 'Leite'" class="inputInspec" type="text" name="Ingrediente" id="txtingrediente"></p>
+            <p>Quantidade: <br> <input placeholder="100gr" class="inputInspec" type="number" name="Quantidade" id="quantidade"></p>
+            <p>Preço: <br> <input placeholder="R$10" class="inputInspec" type="number" name="Preço" id="preco"></p>
+            <p>Qt. da embalagem: <br> <input placeholder="1000gr"  class="inputInspec"type="number" name="QuantoidadeEmbalagem" id="quantiaembalagem"></p>
+            <input class="inputInspec" type="button" value="Adicionar" id="btnAdd" onclick="AdicionarIngrediente()" >
         </div>
         
         
@@ -35,6 +36,7 @@
         </div>
         <div >
             <table id="tabela" >
+                <input type="text" name="Nome" id="Nome" placeholder="Nome: Prato, Ingrediente...">
                 <tr >
                     <Th>Ingre.</Th>
                     <th>Quant.</th>
@@ -43,8 +45,8 @@
                     <th>Res.</th>
                 </tr>
                 <tfoot>
-                    <td class ="tfoot" colspan="3">Qt.P/Receita</td>
-                    <td class ="tfoot" colspan="2">PreçoP/Receita</td>
+                    <td class ="tfoot" colspan="3" id="">Qt.P/Receita</td>
+                    <td colspan="2" class="valor">Valor p/ Receita R$<a id="TotalSoma"></a></td> </td>
                 </tfoot>
             </table>
             

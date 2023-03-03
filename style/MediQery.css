@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@media print {
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+    }
+    header{
+       display: block;
+    }
+    body{
+        width: 100%;
+        background-image: linear-gradient(to top, rgb(255, 255, 255) , rgb(179, 179, 179), rgb(255, 255, 255)  );
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    div{
+        display: none;
+        
+    
+    }
+    p{
+        display: none;
+    }
+    div#espec{
+        display: none;
+    }
+    #btnAdd{
+        display: none;
+        width: 35vw;
+        height: 30px;
+        margin-top: 10px;
+        border-radius: 20px;
+        border: 0px;
+        box-sizing: border-box;
+        outline: 0;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
+        
+    }
+    .inputInspec{
+        display: none;
+        height: 20px;
+        max-width: 40vw;
+        outline: 0;
+        font-size: large;
+        
+    }
+    #tabela{
+        width: 75vw;
+      
+        
+    }
+    table{
+        
+     background-color: #c5c5c5;
+    
+     margin:auto;
+     border: 1px solid black;
+    
+    
+    
+    }
+    th{
+       
+        width: 100%;
+        height: 30px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432);
+    
+    }
+    tr{
+        height: 30px;
+        width: 100%;
+        
+    }
+    
+    td{ /* WORDBREAK da quebra de ingrediente*/
+     word-break: break-all;
+        padding: 5px;
+       
+        width: 40px;
+        height: 30px;
+       
+       
+    }
+    .btn{
+        display: none;
+     width: 15px;
+     height: 15px;
+    
+    }
+    .delete{
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 0, 0, 0.57);
+        color: white;
+        border: 0;
+        box-shadow: 0px 0px 2px black;
+    }
+    
+    #Observacao{
+        display: none;
+        text-align: center;
+        
+    
+    }
+    #textarea{
+        display: none;
+        height: 100px;
+        width: 90%;
+    
+    
+        margin: 0px;
+       
+    }
+    #btnAddObs{
+        display: none;
+       
+        width: 35vw;
+        height: 30px;
+        margin-top: 10px;
+        border-radius: 20px;
+        border: 0px;
+        box-sizing: border-box;
+        outline: 0;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0,)
+        
+    }
+    #menu{
+        display: none;
+        background-color: #8d8d8d;
+        color: white;
+        display: flex;
+        width: 85vw;
+        margin: auto;
+        padding: 20px;
+        
+    
+    }
+    #menu > button{
+        display: none;
+    }
+    .tfoot{
+        background-color: rgba(57, 60, 60, 0.096);
+        font-size: 0.8em;
+        font-weight: bold;
+        color: rgb(100, 100, 100);
+        text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
+    }
+    .valor {
+        background-color: rgba(57, 60, 60, 0.096);
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+    text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
+    }
+    #textarea{
+        font-size: 1.1rem;
+    }
+    #Preparo{
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.368);
+    }    
+}
