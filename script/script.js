@@ -45,11 +45,11 @@ function AdicionarIngrediente(){
       atualizarSoma();
       atualizarQuantia();
   
-    //   ingrediente.value = "";
-    //   quantia.value = "";
-    //   preco.value = "";
-    //   Qemb.value = "";
-    //   ingrediente.focus(); 
+      ingrediente.value = "";
+      quantia.value = "";
+      preco.value = "";
+      Qemb.value = "";
+      ingrediente.focus(); 
     }
   }
 
@@ -82,10 +82,12 @@ function adicionarComentario(){
 function deletar(id){
     var tarefa = document.getElementById(id);
     const valorResultado = parseFloat(tarefa.children[4].textContent);
-    const ValorQuantia = parseFloat(tarefa.children[4].textContent);
+    const ValorQuantia = parseFloat(tarefa.children[1].textContent);
     tarefa.remove();
     subtrairArray(valorResultado);
     subtrairArrayQuantia(ValorQuantia)
+    subtrairArrayQuantia()
+    atualizarSoma()
     atualizarQuantia()
 }
 
