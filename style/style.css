@@ -189,3 +189,16 @@ text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
     box-sizing: border-box;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.155);
 }
+#imprimir{
+    display: block;
+    margin: auto;
+    width: 35vw;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 0px;
+    box-sizing: border-box;
+    outline: 0;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
+    
+}

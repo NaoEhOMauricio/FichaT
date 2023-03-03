@@ -164,4 +164,16 @@
         font-weight: bold;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.368);
     }    
+    #imprimir{
+        display: none;
+        width: 35vw;
+        height: 30px;
+        margin-top: 10px;
+        margin: auto;
+        border-radius: 20px;
+        border: 0px;
+        box-sizing: border-box;
+        outline: 0;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0,)
+    }
 }

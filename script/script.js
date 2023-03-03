@@ -155,3 +155,6 @@ function deletarCm(id){
     tarefa.remove();
    
 }
+function imprimir() {
+    window.print();
+}
