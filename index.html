@@ -11,7 +11,9 @@
 </head>
 <body>
     <header>
-        <h1> Ficha T</h1>
+        <h1> Ficha Técnica de Cozinha</h1>
+        <br>
+       
         
     </header>
     <menu id="menu">
@@ -32,11 +34,11 @@
             <p id="Preparo">Adicionar Metodo de preparo:</p><br>
             <p><textarea id="textarea"> </textarea></p><br>
 
-            <input class="inputInspec" type="button" value="Adicionar Obs." id="btnAddObs" onclick="adicionarComentario()">
+            <input class="inputInspec" type="button" value="Adicionar Obs." id="btnAddObs" onclick="adicionarComentario()" >
         </div>
-        <div >
+        <div id="CampoTabela">
             <table id="tabela" >
-                <input type="text" name="Nome" id="Nome" placeholder="Nome: Prato, Ingrediente...">
+                <input type="text" name="Nome" id="Nome" placeholder="Nome: Prato, Guarnição, Molho...">
                 <tr >
                     <Th>Ingre.</Th>
                     <th>Quant.</th>
@@ -49,12 +51,21 @@
                     <td colspan="2" class="valor">Valor p/ Receita R$<a id="TotalSoma"></a></td> </td>
                 </tfoot>
             </table>
+            <div id="ModoPreparo">
+                <h3>Modo de Preparo:</h3>
+                <Ol id="ListaModo" type="1">
+                
+                </Ol>
+                 
+    
+            </div>
             <br>
             <button  id="imprimir" onclick="imprimir()"><span class="material-symbols-outlined">
                 print
                 </span>
             </button>
         </div>
+
 
         
     <script src="script/script.js">

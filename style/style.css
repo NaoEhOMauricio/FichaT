@@ -1,6 +1,7 @@
 @charset "UTF_8";
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-
+@media only screen and (min-width: 320px){
 *{
     margin: 0px;
     padding: 0px;
@@ -8,12 +9,20 @@
 }
 header{
     text-align: center;
+}
+header > h1{
+    font-family: "Lilita One";
+    font-weight: 100;
     padding: 10px;
-    font-size: 2em;
+    font-size: 3em;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.193);
 }
+header > p{
+    font-size: 0.2em;
+}
 body{
-    width: 94vw;
+   margin: auto;
+    width: 99vw;
     background-image: linear-gradient(to top, rgb(255, 255, 255) , rgb(179, 179, 179), rgb(255, 255, 255)  );
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,12 +35,21 @@ div{
     width: 85vw;
     margin: auto;
     padding: 20px;
+  
+   
 
 }
 div#espec{
+    display: none;
     text-align: center;
     line-height: 22px;
 }
+div#Observacao{
+    display: block;
+    color: white;
+    text-align: center;
+}
+
 #btnAdd{
     width: 35vw;
     height: 30px;
@@ -50,39 +68,43 @@ div#espec{
     font-size: large;
     
 }
+#CampoTabela{
+    border-radius: 0px 0px 20px 20px;
+}
 #tabela{
-    width: 75vw;
-  
+    width: 86vw;
+  margin: auto;
     
 }
 table{
     
  background-color: #c5c5c5;
-
+ 
  margin:auto;
- border: 1px solid black;
+ border: 1px solid rgba(90, 90, 90, 0.444);
 
 
 
 }
+
 th{
-   
-    width: 40px;
+    color: rgb(69, 69, 69);
+    width: 30px;
     height: 30px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432);
 
 }
 tr{
     height: 30px;
-    width: 40px;
+    width: 30px;
     
 }
 
 td{ /* WORDBREAK da quebra de ingrediente*/
  word-break: break-all;
     padding: 5px;
-   
-    width: 40px;
+    text-align: center;
+    width: 30px;
     height: 30px;
    
    
@@ -100,12 +122,6 @@ td{ /* WORDBREAK da quebra de ingrediente*/
     border: 0;
     box-shadow: 0px 0px 2px black;
 }
-
-#Observacao{
-    text-align: center;
-    
-
-}
 #textarea{
     height: 100px;
     width: 90%;
@@ -115,46 +131,95 @@ td{ /* WORDBREAK da quebra de ingrediente*/
    
 }
 #btnAddObs{
-    width: 35vw;
+    width: 40vw;
     height: 30px;
     margin-top: 10px;
     border-radius: 20px;
     border: 0px;
     box-sizing: border-box;
     outline: 0;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0,)
+    box-shadow: 2px 2px 3px rgba(0, 0, 0,);
+    transition: transform .5s;
     
 }
+
+#ModoPreparo{
+    display: block;
+    background-color: #b6b6b6;
+    width: 80vw;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid rgba(93, 93, 93, 0.282);
+    color: rgb(78, 77, 77);
+  
+   
+}
+#ModoPreparo > h3{
+    font-size: 10px;
+    margin: 0px;
+    position: relative;
+    top: -15px;
+    left: -15px;
+}
+li.MP{
+    
+    display: flex;
+    border: 1px thick black;
+    word-break: break-all;
+}
+button.deleteMP{
+    display: block;
+    
+    float: right;
+   
+   background-color: transparent;
+   border: 0px;
+  
+
+}
+#btnAddObs:hover{
+    transform: scale(1.1); /* aumentar o tamanho da imagem ao passar o mouse */
+  transition: transform 0.5s; 
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);
+    
+}
+
 #menu{
     background-color: #8d8d8d;
     color: white;
     display: flex;
     width: 85vw;
     margin: auto;
+    
     padding: 20px;
+    border-radius: 20px 20px 0px 0px;
     
 
 }
 #menu > button{
-    padding: 5px;
+    padding: 10px;
+    margin: 0px 10px;
     background-color: #8d8d8d;
     border: 0;
-    font-size: 20px;
+    border-radius: 30px;
+    font-size: 25px;
     color: white;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.626);
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.626);
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.225);
-    border-radius: 20px;
+ 
 }
 #menu > button:hover{
-    padding: 5px;
-    background-color: #36313129;
-    border: 0;
-    font-size: 20px;
+    
+    background-color: none;
+    border: #8d8d8d;
+    font-size: 25px;
     color: white;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.436);
+    text-shadow: 2px 2px 5px #2c2c2c;
+    box-shadow: 0px 0px 20px #8d8d8d;
     cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.333);
+   
+    transition: 1s;
 }
 .tfoot{
     background-color: rgba(57, 60, 60, 0.096);
@@ -171,7 +236,7 @@ color: rgb(100, 100, 100);
 text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
 }
 #textarea{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 #Preparo{
     font-size: 1.3rem;
@@ -183,6 +248,8 @@ text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
     width: 280px;
     height: 40px;
     font-size: 20px;
+    border: 0;
+    padding: 10px;
     margin: auto;
     margin-bottom: 10px;
     outline: 0;
@@ -201,4 +268,5 @@ text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
     outline: 0;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
     
+}
 }
