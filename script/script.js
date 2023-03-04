@@ -13,7 +13,8 @@ let AbIngrediente = document.getElementById('AbaIngrediente')
 let AbModo = document.getElementById('AbaModo')
 let SomaQuantia = document.getElementById('SomaQuantia')
 let TotalSoma = document.getElementById('TotalSoma');
-let ListaModo = document.getElementById('ListaModo')
+let ListaModo = document.getElementById('ListaModo');
+var currentDate = new Date();
 const ListaQuantia = [];
 const ListaResultado = [];
 
@@ -55,11 +56,11 @@ function AdicionarIngrediente(){
 
 
 
-  ingrediente.value = "";
-  quantia.value = "";
-  preco.value = "";
-  Qemb.value = "";
-  ingrediente.focus(); 
+  // ingrediente.value = "";
+  // quantia.value = "";
+  // preco.value = "";
+  // Qemb.value = "";
+  // ingrediente.focus(); 
 }
 
 Qemb.addEventListener("keydown", function(event) {
@@ -143,7 +144,7 @@ function trocarAba(numero) {
 function atualizarValor() {
   const soma = ListaResultado.reduce((total, numero) => total + numero, 0);
   const elementoSoma = document.getElementById("TotalSoma");
-  elementoSoma.textContent = soma.toFixed(1) + "gr";
+  elementoSoma.textContent = soma.toFixed(2);
   
   // Verifica se a lista está vazia
   if (ListaResultado.length === 0) {
@@ -199,3 +200,13 @@ function deletarComentario(id) {
 function imprimir() {
     window.print();
 }
+
+
+  // atualiza a data no rodapé
+  document.getElementById('date').innerHTML = currentDate.toLocaleDateString();
+      
+  // atualiza a hora no rodapé a cada segundo
+  setInterval(function() {
+    var currentTime = new Date();
+    document.getElementById('time').innerHTML = currentTime.toLocaleTimeString();
+  }, 1000);

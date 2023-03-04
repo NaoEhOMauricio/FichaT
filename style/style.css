@@ -59,7 +59,12 @@ div#Observacao{
     box-sizing: border-box;
     outline: 0;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
-    
+    transition: transform 0.5s; 
+}
+#btnAdd:hover{
+    transform: scale(1.1); /* aumentar o tamanho da imagem ao passar o mouse */
+    transition: transform 0.5s; 
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);
 }
 .inputInspec{
     height: 20px;
@@ -264,15 +269,23 @@ text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
     margin-top: 10px;
     border-radius: 20px;
     border: 0px;
-    
+    transition: transform 0.5s; 
     outline: 0;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
     
 }
+#imprimir:hover{
+    transform: scale(1.1); /* aumentar o tamanho da imagem ao passar o mouse */
+    transition: transform 0.5s; 
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);
+}
+div#ModoPreparo{
+    width: 90%;
+}
 #ListaModo{
     word-break: break-all;
     padding: 10px;
-    width: 98%;
+    width: 78vw;
     justify-content: space-between;
 }
 #ListaModo > li {

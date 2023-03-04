@@ -6,10 +6,21 @@
         font-family: sans-serif;
     }
     header{
-       display: none;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+    }
+    header > h1{
+        font-family: "Lilita One";
+        font-size: 3em;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.193);
+    }
+    header > p{
+        font-size: 0.2em;
     }
     body{
-        width: 100%;
+       margin: auto;
+        width: 99vw;
         background-image: linear-gradient(to top, rgb(255, 255, 255) , rgb(179, 179, 179), rgb(255, 255, 255)  );
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -17,16 +28,30 @@
     }
     
     div{
-        display: none;
-        
+        height: 100%;
+        display: block;
+        background-color: #8d8d8d;
+        width: 85vw;
+        margin: auto;
+        padding: 20px;
+      
+       
     
     }
-    p{
+    div > p{
         display: none;
     }
     div#espec{
         display: none;
+        text-align: center;
+        line-height: 22px;
     }
+    div#Observacao{
+        display: none;
+        color: white;
+        text-align: center;
+    }
+    
     #btnAdd{
         display: none;
         width: 35vw;
@@ -37,7 +62,12 @@
         box-sizing: border-box;
         outline: 0;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
-        
+        transition: transform 0.5s; 
+    }
+    #btnAdd:hover{
+        transform: scale(1.1); /* aumentar o tamanho da imagem ao passar o mouse */
+        transition: transform 0.5s; 
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);
     }
     .inputInspec{
         display: none;
@@ -47,39 +77,43 @@
         font-size: large;
         
     }
+    #CampoTabela{
+        border-radius: 0px 0px 20px 20px;
+    }
     #tabela{
-        width: 75vw;
-      
+        width: 86vw;
+      margin: auto;
         
     }
     table{
         
      background-color: #c5c5c5;
-    
+     
      margin:auto;
-     border: 1px solid black;
+     border: 1px solid rgba(90, 90, 90, 0.444);
     
     
     
     }
+    
     th{
-       
-        width: 100%;
+        color: rgb(69, 69, 69);
+        width: 30px;
         height: 30px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432);
     
     }
     tr{
         height: 30px;
-        width: 100%;
+        width: 30px;
         
     }
     
     td{ /* WORDBREAK da quebra de ingrediente*/
      word-break: break-all;
         padding: 5px;
-       
-        width: 40px;
+        text-align: center;
+        width: 30px;
         height: 30px;
        
        
@@ -90,7 +124,7 @@
      height: 15px;
     
     }
-    .delete{
+    .delete, .delete1{
         display: none;
         width: 100%;
         height: 100%;
@@ -99,15 +133,7 @@
         border: 0;
         box-shadow: 0px 0px 2px black;
     }
-    
-    #Observacao{
-        display: none;
-        text-align: center;
-        
-    
-    }
     #textarea{
-        display: none;
         height: 100px;
         width: 90%;
     
@@ -117,30 +143,95 @@
     }
     #btnAddObs{
         display: none;
-       
-        width: 35vw;
+        width: 40vw;
         height: 30px;
         margin-top: 10px;
         border-radius: 20px;
         border: 0px;
         box-sizing: border-box;
         outline: 0;
-        box-shadow: 2px 2px 3px rgba(0, 0, 0,)
+        box-shadow: 2px 2px 3px rgba(0, 0, 0,);
+        transition: transform .5s;
         
     }
-    #menu{
-        display: none;
-        background-color: #8d8d8d;
-        color: white;
-        display: flex;
-        width: 85vw;
+    
+    #ModoPreparo{
+        display: block;
+        background-color: #b6b6b6;
+        width: 80vw;
         margin: auto;
         padding: 20px;
+        margin-top: 20px;
+        border: 2px solid rgba(93, 93, 93, 0.282);
+        color: rgb(78, 77, 77);
+      
+       
+    }
+    #ModoPreparo > h3{
+        font-size: 10px;
+        margin: 0px;
+        position: relative;
+        top: -15px;
+        left: -15px;
+    }
+    li.MP{
+        
+        display: flex;
+        border: 1px thick black;
+        word-break: break-all;
+    }
+    button.deleteMP{
+        display: none;
+        
+        float: right;
+       
+       background-color: transparent;
+       border: 0px;
+      
+    
+    }
+    #btnAddObs:hover{
+        transform: scale(1.1); /* aumentar o tamanho da imagem ao passar o mouse */
+      transition: transform 0.5s; 
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);
+        
+    }
+    
+    #menu{
+        background-color: #8d8d8d;
+        color: white;
+        display: none;
+        width: 85vw;
+        margin: auto;
+        
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
         
     
     }
     #menu > button{
-        display: none;
+        padding: 10px;
+        margin: 0px 10px;
+        background-color: #8d8d8d;
+        border: 0;
+        border-radius: 30px;
+        font-size: 25px;
+        color: white;
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.626);
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.225);
+     
+    }
+    #menu > button:hover{
+        
+        background-color: none;
+        border: #8d8d8d;
+        font-size: 25px;
+        color: white;
+        text-shadow: 2px 2px 5px #2c2c2c;
+        box-shadow: 0px 0px 20px #8d8d8d;
+        cursor: pointer;
+       
+        transition: 1s;
     }
     .tfoot{
         background-color: rgba(57, 60, 60, 0.096);
@@ -157,16 +248,76 @@
     text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
     }
     #textarea{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     #Preparo{
         font-size: 1.3rem;
         font-weight: bold;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.368);
-    }    
-    button#imprimir{
-        display: none;
-      
+    }
+    #Nome{
+        display: block;
+        width: 280px;
+        height: 40px;
+        font-size: 25px;
+        border: 0;
+        text-align: center;
+        padding: 10px;
+        margin: auto;
+        margin-bottom: 10px;
+        outline: 0;
         
     }
-}
+    #imprimir{
+        display: none;
+        margin: auto;
+        width: 35vw;
+        height: 30px;
+        margin-top: 10px;
+        border-radius: 20px;
+        border: 0px;
+        transition: transform 0.5s; 
+        outline: 0;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
+        
+    }
+    #imprimir:hover{
+        transform: scale(1.1); /* aumentar o tamanho da imagem ao passar o mouse */
+        transition: transform 0.5s; 
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);
+    }
+    div#ModoPreparo{
+        width: 90%;
+    }
+    #ListaModo{
+        word-break: break-all;
+        padding: 10px;
+        width: 78vw;
+        justify-content: space-between;
+    }
+    #ListaModo > li {
+        display: flex;
+       
+    
+       padding: 10px;
+       justify-content: space-between;
+     
+    }
+    .delete1{
+        padding: 5px;
+        background-color: rgb(255, 87, 87);
+        border: 0;
+        color: white;
+    }
+    footer {
+        
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
