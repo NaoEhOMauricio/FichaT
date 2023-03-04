@@ -159,7 +159,7 @@ function atualizarValor() {
   function atualizarQuantia() {
     const soma = ListaQuantia.reduce((total, numero) => total + numero, 0);
     const elementoSoma = document.getElementById("TotalQuantia");
-    elementoSoma.textContent = soma.toFixed(1) + "gr";
+    elementoSoma.textContent = soma.toFixed(0) + "gr";
     
     // Verifica se a lista está vazia
     if (ListaQuantia.length === 0) {
@@ -210,3 +210,4 @@ function imprimir() {
     var currentTime = new Date();
     document.getElementById('time').innerHTML = currentTime.toLocaleTimeString();
   }, 1000);
+

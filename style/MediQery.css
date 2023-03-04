@@ -268,7 +268,7 @@
         outline: 0;
         
     }
-    #imprimir{
+    #botao_imprimir{
         display: none;
         margin: auto;
         width: 35vw;
@@ -281,7 +281,7 @@
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
         
     }
-    #imprimir:hover{
+    #botao_imprimir:hover{
         transform: scale(1.1); /* aumentar o tamanho da imagem ao passar o mouse */
         transition: transform 0.5s; 
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);
@@ -310,7 +310,7 @@
         color: white;
     }
     footer {
-        
+        display: none;
         width: 100%;
         background-color: #333;
         color: #fff;
