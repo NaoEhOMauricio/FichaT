@@ -56,11 +56,11 @@ function AdicionarIngrediente(){
 
 
 
-  // ingrediente.value = "";
-  // quantia.value = "";
-  // preco.value = "";
-  // Qemb.value = "";
-  // ingrediente.focus(); 
+  ingrediente.value = "";
+  quantia.value = "";
+  preco.value = "";
+  Qemb.value = "";
+  ingrediente.focus(); 
 }
 
 Qemb.addEventListener("keydown", function(event) {
