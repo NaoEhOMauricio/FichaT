@@ -55,11 +55,11 @@ function AdicionarIngrediente(){
 
 
 
-  // ingrediente.value = "";
-  // quantia.value = "";
-  // preco.value = "";
-  // Qemb.value = "";
-  // ingrediente.focus(); 
+  ingrediente.value = "";
+  quantia.value = "";
+  preco.value = "";
+  Qemb.value = "";
+  ingrediente.focus(); 
 }
 
 Qemb.addEventListener("keydown", function(event) {
@@ -85,7 +85,7 @@ function adicionarComentario() {
     let novoComentario = `
     
         <li id="cm-${n}" colspan="5">${Observacao}
-        <button onclick="deletarComentario('cm-${n}')" class="delete">
+        <button onclick="deletarComentario('cm-${n}')" class="delete1">
             <i class="material-symbols-outlined">
               delete
             </i>
