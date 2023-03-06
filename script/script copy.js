@@ -15,32 +15,20 @@ let SomaQuantia = document.getElementById('SomaQuantia')
 let TotalSoma = document.getElementById('TotalSoma');
 let ListaModo = document.getElementById('ListaModo');
 var currentDate = new Date();
-const quantiaInput = document.querySelector('#quantia');
-const unidadeMedidaSelect = document.querySelector('#unidade-medida');
 const ListaQuantia = [];
 const ListaResultado = [];
 
 function arredondarParaDuasCasas(valor) {
   return Math.round(valor * 100) / 100;
 }
-
-unidadeMedidaSelect.addEventListener('change', () => {
-  if (unidadeMedidaSelect.value === 'ml') {
-    quantiaInput.setAttribute('placeholder', 'Digite a quantidade em mililitros');
-    quantiaInput.setAttribute('step', '0.1');
-  } else {
-    quantiaInput.setAttribute('placeholder', 'Digite a quantidade em gramas');
-    quantiaInput.setAttribute('step', '1');
-  }
-});
 //------------------------------------------------------------------------------------------------------
 function AdicionarIngrediente(){
   // Captura de valores digitados.
-  let unidadeMedida = document.querySelector('#unidade-medida').value;
   let ValorIngrediente = ingrediente.value;
   let ValorQuantia = quantia.value;
   let ValorPreço = preco.value;
   let ValorQemb = Qemb.value;
+  let ValorResultado = arredondarParaDuasCasas(ValorQuantia * ValorPreço / ValorQemb);
 
   // Verifica se algum campo está vazio
   if (ValorIngrediente === "" || ValorQuantia === "" || ValorPreço === "" || ValorQemb === "") {
@@ -48,24 +36,12 @@ function AdicionarIngrediente(){
     return;
   }
 
-  // Verifica a unidade de medida selecionada
-  let unidadeResultado = "";
-  if (unidadeMedida === "g") {
-    unidadeResultado = "g";
-  } else if (unidadeMedida === "ml") {
-    unidadeResultado = "ml";
-  } else if (unidadeMedida === "uni") {
-    unidadeResultado = "uni";
-  }
-
-  let ValorResultado = arredondarParaDuasCasas(ValorQuantia * ValorPreço / ValorQemb);
-
   c++;
   let NovaLinha = `<tr id="${c}"> 
     <td> ${ValorIngrediente}</td>
-    <td> ${ValorQuantia} ${unidadeMedida} </td>
+    <td> ${ValorQuantia}gr </td>
     <td> R$${ValorPreço} </td>
-    <td> ${ValorQemb} ${unidadeMedida} </td>
+    <td> ${ValorQemb}gr </td>
     <td> R$${ValorResultado.toFixed(2)} </td>
     <td> <button onclick="deletar(${c})" class="delete">
       <i class="material-symbols-outlined">
@@ -86,6 +62,7 @@ function AdicionarIngrediente(){
   Qemb.value = "";
   ingrediente.focus(); 
 }
+
 Qemb.addEventListener("keydown", function(event) {
   // verifica se a tecla pressionada foi Enter
   if (event.keyCode === 13) {
@@ -224,5 +201,4 @@ function deletarComentario(id) {
 function imprimir() {
     window.print();
 }
-
 

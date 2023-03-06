@@ -23,17 +23,9 @@
     
         <div class="aba1" id="espec" style="display: block;">
             <p>Nome ingrediente: <br> <input placeholder="'Arroz', 'Leite'" class="inputInspec" type="text" name="Ingrediente" id="txtingrediente"></p>
-            <p>Quantidade: <br> <input placeholder="'100gr' / '100ml' / '1uni'" class="inputInspec" type="number" name="Quantidade" id="quantidade"></p><p id="#unidade-medidap"><label for="unidade-medida"> Unidade de Medida</label></p>
-            <select id="unidade-medida" name="unidade-medida">
-              <option value="gr">Gramas (g)</option>
-              <option value="ml">Mililitros (ml)</option>
-              <option value="uni">Unidade (uni)</option>
-            </select>
-            <p>Preço: <br> <input placeholder="'R$10'" class="inputInspec" type="number" name="Preço" id="preco"></p>
-            
-            <p>Qt. da embalagem: <br> <input placeholder="'1000gr' / '1000ml' / '10'"  class="inputInspec"type="number" name="QuantoidadeEmbalagem" id="quantiaembalagem"></p>
-            <p id="conversão">1000gr = 1kg, 1000ml = 1Lt</p>
-            
+            <p>Quantidade: <br> <input placeholder="100gr" class="inputInspec" type="number" name="Quantidade" id="quantidade"></p>
+            <p>Preço: <br> <input placeholder="R$10" class="inputInspec" type="number" name="Preço" id="preco"></p>
+            <p>Qt. da embalagem: <br> <input placeholder="1000gr"  class="inputInspec"type="number" name="QuantoidadeEmbalagem" id="quantiaembalagem"></p>
             <input class="inputInspec" type="button" value="Adicionar" id="btnAdd" onclick="AdicionarIngrediente()" >
         </div>
         
@@ -74,13 +66,11 @@
                  
     
             </div>
-            <br><input type="text" id="input-impressao" media="print" style="display:block;" placeholder="Nome do Chef">
             <br>
             <button  id="botao_imprimir" onclick="imprimir()"><span class="material-symbols-outlined">
                 print
                 </span>
             </button>
-           
         </div>
 
 
@@ -94,6 +84,6 @@
     <script src="script/script.js">
 
     </script>
-  
+
 </body>
 </html>

@@ -307,4 +307,15 @@ div.datetime{
     background-color: transparent;
     font-size: 10px;
 }
+p#conversão{
+    font-size: 0.8em;
+    font-family: "Lilita One";
+    color: rgba(248, 248, 248, 0.822);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.36);
+}
+#input-impressao{
+     border: 0;
+     margin: auto;
+      
+}
 }
