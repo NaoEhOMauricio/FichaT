@@ -1,0 +1,4 @@
+##### LOCAWEB - NAO REMOVER #####
+AddHandler php80-script .php
+suPHP_ConfigPath /home/fichatecnicacozi2/
+##### LOCAWEB - NAO REMOVER #####

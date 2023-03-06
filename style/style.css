@@ -261,7 +261,7 @@ text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
     box-sizing: border-box;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.155);
 }
-#botao_imprimir{
+button#botao_imprimir{
     display: block;
     margin: auto;
     width: 35vw;
@@ -274,7 +274,7 @@ text-shadow: 1px 1px 3px rgba(14, 14, 14, 0.31);
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
     
 }
-#botao_imprimir:hover{
+button#botao_imprimir:hover{
     transform: scale(1.1); /* aumentar o tamanho da imagem ao passar o mouse */
     transition: transform 0.5s; 
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);

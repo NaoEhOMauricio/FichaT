@@ -268,7 +268,7 @@
         outline: 0;
         
     }
-    #botao_imprimir{
+    button#botao_imprimir{
         display: none;
         margin: auto;
         width: 35vw;
@@ -281,7 +281,7 @@
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.327);
         
     }
-    #botao_imprimir:hover{
+    button#botao_imprimir:hover{
         transform: scale(1.1); /* aumentar o tamanho da imagem ao passar o mouse */
         transition: transform 0.5s; 
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.296);
