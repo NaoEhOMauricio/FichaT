@@ -18,7 +18,9 @@ var currentDate = new Date();
 const ListaQuantia = [];
 const ListaResultado = [];
 
-
+function arredondarParaDuasCasas(valor) {
+  return Math.round(valor * 100) / 100;
+}
 //------------------------------------------------------------------------------------------------------
 function AdicionarIngrediente(){
   // Captura de valores digitados.
@@ -26,7 +28,7 @@ function AdicionarIngrediente(){
   let ValorQuantia = quantia.value;
   let ValorPreço = preco.value;
   let ValorQemb = Qemb.value;
-  let ValorResultado = ValorQuantia * ValorPreço / ValorQemb;
+  let ValorResultado = arredondarParaDuasCasas(ValorQuantia * ValorPreço / ValorQemb);
 
   // Verifica se algum campo está vazio
   if (ValorIngrediente === "" || ValorQuantia === "" || ValorPreço === "" || ValorQemb === "") {
@@ -40,7 +42,7 @@ function AdicionarIngrediente(){
     <td> ${ValorQuantia}gr </td>
     <td> R$${ValorPreço} </td>
     <td> ${ValorQemb}gr </td>
-    <td> R$${ValorResultado} </td>
+    <td> R$${ValorResultado.toFixed(2)} </td>
     <td> <button onclick="deletar(${c})" class="delete">
       <i class="material-symbols-outlined">
           delete
@@ -53,8 +55,6 @@ function AdicionarIngrediente(){
   
   atualizarQuantia();
   atualizarValor();
-
-
 
   ingrediente.value = "";
   quantia.value = "";
@@ -100,7 +100,7 @@ function adicionarComentario() {
 
     ModoDePreparo.value = ""
     ModoDePreparo.focus()
-  }
+  } 
 }
 ModoDePreparo.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
@@ -112,13 +112,13 @@ ModoDePreparo.addEventListener("keydown", function(event) {
 
 function deletar(id){
   var tarefa = document.getElementById(id);
-  const ValorRes = parseFloat(tarefa.children[1].textContent);
+  const ValorRes = parseFloat(tarefa.children[4].textContent.replace(/[^\d\.,]/g, '').replace(',', '.'));
   const ValorQuantia = parseFloat(tarefa.children[1].textContent);
   tarefa.remove();
   subtrairArrayQuantia(ValorQuantia)
+  atualizarQuantia()
   subtrairArrayValor(ValorRes)
   atualizarValor()
-  atualizarQuantia()
 }
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -174,11 +174,12 @@ function subtrairArrayValor(valor) {
     ListaResultado.splice(index, 1);
   }
   const resultado = ListaResultado.reduce((acumulador, valorAtual) => {
-    return acumulador - valorAtual;
-  }, 0);
+    return acumulador - parseFloat(valorAtual);
+}, 0);
   atualizarValor();
-  return resultado;
+  return resultado.toFixed(2);
 }
+
 
 
 function subtrairArrayQuantia(valor) {
@@ -200,14 +201,4 @@ function deletarComentario(id) {
 function imprimir() {
     window.print();
 }
-
-
-  // atualiza a data no rodapé
-  document.getElementById('date').innerHTML = currentDate.toLocaleDateString();
-      
-  // atualiza a hora no rodapé a cada segundo
-  setInterval(function() {
-    var currentTime = new Date();
-    document.getElementById('time').innerHTML = currentTime.toLocaleTimeString();
-  }, 1000);
 
